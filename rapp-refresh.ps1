@@ -1471,7 +1471,7 @@ function Start-Brainstem {
             throw "Brainstem did not start an owned server process within 30 seconds."
         }
 
-        $url = "http://localhost:$port"
+        $url = "http://127.0.0.1:$port"
         for ($attempt = 0; $attempt -lt 60; $attempt++) {
             if ($brainstemProcess.HasExited) {
                 throw "Brainstem process $($brainstemProcess.Id) exited before becoming healthy."
